@@ -5,6 +5,16 @@ public class Entidad {
 	private String name;
 	private String descripcion;
 	
+	// añado este constructor
+    public Entidad(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // mantengo el constructor vacío por si Spring o Jackson lo necesitan
+    public Entidad() {
+    }
+	
 	public int getId() {
 		return id;
 	}
