@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Welcome</title>
+    <title>resultado de solicitud</title>
 </head>
-	<body>
-    	<p>Su solicitud se ha realizado. Puede descargar los resultados cuando estén disponibles con el siguiente token:</p>
-		<h1 th:text="${token}"></h1>
-	</body>
+<body>
+    <p>su solicitud se ha realizado. puede descargar los resultados cuando estén disponibles con el siguiente token:</p>
+    <h1 th:text="${token}"></h1>
+    
+    <p>
+        <a th:href="@{/grid(tok=${token})}">ver resultados en el grid ampliado</a>
+    </p>
+</body>
 </html>
